@@ -1,3 +1,45 @@
 body {
-	background-color: green;
+	background-color: /*#C6C6C6*/ #2D313F;
+}
+
+h1 {
+	background-color: darkblue;
+	color: lightblue;
+	text-align: center;
+}
+
+a{
+	color: yellow;
+}
+
+ul{
+	color: white;
+}
+
+#search_form{
+	margin:auto;
+	background-color: maroon;
+	color: white;
+	text-align: center;
+}
+#content_box {  
+	background-color: #2D313F;
+	color: white;
+	display: block;
+}
+#picture_box{
+	background-color: pink;
+	display: inline-block;
+
+}
+#description_box{
+	background-color: #2D313F;
+	display: inline-block;
+}
+#plot_box{
+	background-color: #2D313F;
+}
+#actors_box{
+	background-color: #2D313F;
+	color: white;
 }

@@ -1,17 +1,35 @@
+
 {% extends "default.html" %}
 
 {%block corps %}
-	<p>
-		<ul>
+
+	<div id="content_box">
+
+		<div id="picture_box">
+
+		<img src="https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg" 
+		alt=""
+		width="140px"
+		height="200px">
+		</div>
+
+		<div id="description_box">	
+			<ul>
 
 		<li>{{card.Title}} </li><br />
 		<li>{{card.Year}}</li> <br />
 		<li>{{card.Genre}} </li><br />
 		<li>{{card.Runtime}}</li> <br />
-		<li>{{card.Actors}}</li> <br />
+			</ul>
+
+		</div>
+
+	<div id="plot_box">
 		<li>{{card.Plot}}</li> <br />
-		<img src="https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg" alt="">
-		</ul>
-	</p>
+	</div>
+
+	<div id="actors_box">
+		<li>{{card.Actors}}</li> <br />
+	</div>
 
 {% endblock %}

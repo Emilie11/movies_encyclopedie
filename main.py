@@ -21,6 +21,9 @@ def search_movie():
 	####### DEVELOPMENT PURPOSE #######
 	search_result = json.load(open('./examples/search.json', 'rb'))['Search']
 
+	####### PRODUCTION PURPOSE  #######
+	
+	
 	return render_template('search.html', title='Home', movies_found=search_result)
 
 @app.route('/movie/<string:movie_id>')
@@ -28,6 +31,9 @@ def movie_page(movie_id):
 
 	####### DEVELOPMENT PURPOSE #######
 	card_result = json.load(open('./examples/card.json', 'rb'))
+
+	####### PRODUCTION PURPOSE  #######
+
 
 	return render_template('card.html', title='Home', card = card_result)
 
