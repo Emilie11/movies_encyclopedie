@@ -4,8 +4,13 @@
 
 	{% for movie in movies_found %}
 		<div>
-			<a href="/movie/{{movie.imdbID}}">{{movie.Year}} <--> {{movie.Title}}</a>
+			<a href="/movie/{{movie.imdbID}}">   
+				<img src="{{movie.Poster}}" 
+					 alt=""
+					 height="100px"
+					 width="75px"> {{movie.Title}}   {{movie.Year}}   {{movie.Type}}  </a>
 		</div>
+
 	{% endfor %}
 
 {% endblock %}
