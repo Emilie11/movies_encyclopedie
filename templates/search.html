@@ -1,0 +1,11 @@
+{% extends "default.html" %}
+
+{%block corps %}
+
+	{% for movie in movies_found %}
+		<div>
+			<a href="/movie/{{movie.imdbID}}">{{movie.Year}} <--> {{movie.Title}}</a>
+		</div>
+	{% endfor %}
+
+{% endblock %}
