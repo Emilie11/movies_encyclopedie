@@ -1,18 +1,22 @@
 {% extends "default.html" %}
 
 {%block corps %}
-
-	{% for movie in movies_found %}
-		<div>
+	{% if movies_found is not none %}   
+		{% for movie in movies_found %}
 			<a href="/movie/{{movie.imdbID}}"> 
-				<hr>
-				<img src="{{movie.Poster}}" 
-					 alt=""
-					 height="100px"
-					 width="75px"> --->   <strong>{{movie.Title}} :  {{movie.Year}} :  {{movie.Type}}</strong>  <br />
-					</a>
-		</div>
-		<br />
-	{% endfor %}
-
+				<div class="col-xl-2 col-md-3 col-sm-4">
+					<div class="col-12 text-center">
+						<img src="{{movie.Poster}}" alt="Poster" width="175"  class="img-fluid align-middle" height="300">
+					</div>
+					<div class="col-12">
+						<p class="text-center">
+							{{movie.Title}} <br /> {{movie.Type}} <br /> {{movie.Year}}
+						</p>
+					</div>
+				</a>
+			</div>
+		{% endfor %}
+	{% else %}
+	    <p class="text-warning">Rien trouvé</p>
+	{%endif %}
 {% endblock %}

@@ -3,9 +3,8 @@ body {
 }
 
 h1 {
-	background-color: #f8f8f8;
 	color: #9b0d00;
-	font-size: 10em;
+	font-size: 150px;
 	text-align: center;
 }
 
@@ -15,22 +14,20 @@ a{
 
 h2{
 	color: #9b0d00;
-	font-size: 4em;
-}
-
-h3{
-	color: #9b0d00;
-	font-size: 3em;
+	font-size: 40px;
 }
 
 h4{
 	color: #9b0d00;
-	font-size: 2.5em; 
+	font-size: 25px; 
+}
+
+#img_logo{
+	margin-top: -120px;
 }
 #search_form{
 	margin:auto;
 	background-color: #f8f8f8;
-	font-size: 1.3em;
 	color:  #626b94;
 	text-align: center;
 }
@@ -64,4 +61,18 @@ h4{
 }
 header div{
 	display: inline-block;
+}
+.bg-myblue{
+	background-color: #9b0d00;
+	border-radius:  30px ;
+	box-shadow: 0.8px 0.8px 0px black;
+}
+
+.word_text{
+	word-spacing: 4px; 
+}
+
+.sartrouville{
+    padding-top: 30;
+    padding-bottom: 30;
 }

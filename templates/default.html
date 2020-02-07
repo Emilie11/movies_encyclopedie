@@ -2,24 +2,43 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Cinépédia</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
 	</head>
 		
 	<body>
-		<header>
-			<a href="index">
-			<div >
-				<img src="{{ url_for('static', filename='logo_cinepedia.png') }}" alt="" width="150px" height="125px">
+		<div class="container-fluid">
+			<div class="row sartrouville">
+				<div class="col-12">
+					<header class="d-flex justify-content-center">
+						<a href="/index">
+							<img src="{{ url_for('static', filename='logo_cinepedia.png') }}" class="img-fluid align-middle" id="img_logo"alt="" >
+							<div >
+								<h1>inépédia </h1>
+							</div>
+						</a>
+					</header>
+				</div>
 			</div>
-			<div >
-				<h1>inépédia </h1>
+			<div class="row justify-content-md-center">
+				<div class="col-6">
+					{% include 'search_form.html' %}
+				</div>
 			</div>
-			</a>
-		</header>
-		<div id="search_form">
-			{% include 'search_form.html' %}
+			<div class="row justify-content-md-center">
+				<div class="col-6 text-center" >
+					Bienvenue sur Cinépédia, retrouvez en un click toutes les dernières news sur les sorties cinéma !
+					<br>
+					<br>
+					<br>
+				</div>
+			</div>
 		</div>
-
-		{% block corps %}{% endblock %}
+		<div class="container-fluid">
+			<div class="row justify-content-md-center">
+				{% block corps %}
+				{% endblock %}
+			</div>
+		</div>
 	</body>
 </html>

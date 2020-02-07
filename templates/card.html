@@ -3,39 +3,25 @@
 
 {%block corps %}
 
-	<div id="content_box">
+	<div class="col-md-3 text-center">
+		<img src="{{card.Poster}}" class="img-fluid shadow" alt="">
+	</div>
+	<div class="col-md-5">
+		<h2>
+			{{card.Title}} 
+		</h2> 
+		<br>
 
-		<div id="picture_box">
-
-			<img src="{{card.Poster}}" 
-			alt=""
-			width="550px"
-			height="850px">
-		</div>
-
-		<div id="description_box">	
-			<h2>
-				{{card.Title}} 
-			</h2> 
+ 		<p class="funny_text word_text">	
+			A <span class="bg-myblue text-white "> &nbsp;{{card.Type}} </span>&nbsp;of <span class="bg-myblue text-white"> &nbsp;{{card.Genre}} </span> &nbsp;released in <span class="bg-myblue text-white"> &nbsp;{{card.Year}}&nbsp;</span> <br>	Starring <span class="bg-myblue text-white"> &nbsp;{{card.Actors}}&nbsp;</span>
+ 		</p>
+		<div id="plot_box">
 			<h4>
-				{{card.Type}} : {{card.Genre}}  
-				{{card.Year}} - {{card.Runtime}} 
+				Plot : 
 			</h4> 
-				
-			<div id="actors_box">
-				<h4>
-					Distribution : {{card.Actors}} 
-				</h4> 
-			</div>
-			<div id="plot_box">
-				<h4>
-					Synopsis : 
-				</h4> 
-				<p>
-					{{card.Plot}} 
-				</p>
-			</div>
-
+			<p>
+				{{card.Plot}} 
+			</p>
 		</div>
 	</div>
 
