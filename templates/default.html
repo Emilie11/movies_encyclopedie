@@ -1,16 +1,21 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Mon site de recherche de film</title>
+		<title>Cinépédia</title>
 		<link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
 	</head>
-
+		
 	<body>
-		<a href="./index">
-			<header>
-			<h1> Mon site </h1>
-			</header>
-		</a>
+		<header>
+			<a href="index">
+			<div >
+				<img src="{{ url_for('static', filename='logo_cinepedia.png') }}" alt="" width="150px" height="125px">
+			</div>
+			<div >
+				<h1>inépédia </h1>
+			</div>
+			</a>
+		</header>
 		<div id="search_form">
 			{% include 'search_form.html' %}
 		</div>

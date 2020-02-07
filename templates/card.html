@@ -7,29 +7,36 @@
 
 		<div id="picture_box">
 
-		<img src="https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg" 
-		alt=""
-		width="140px"
-		height="200px">
+			<img src="{{card.Poster}}" 
+			alt=""
+			width="550px"
+			height="850px">
 		</div>
 
 		<div id="description_box">	
-			<ul>
-
-		<li>{{card.Title}} </li><br />
-		<li>{{card.Year}}</li> <br />
-		<li>{{card.Genre}} </li><br />
-		<li>{{card.Runtime}}</li> <br />
-			</ul>
+			<h2>
+				{{card.Title}} 
+			</h2> 
+			<h4>
+				{{card.Type}} : {{card.Genre}}  
+				{{card.Year}} - {{card.Runtime}} 
+			</h4> 
+				
+			<div id="actors_box">
+				<h4>
+					Distribution : {{card.Actors}} 
+				</h4> 
+			</div>
+			<div id="plot_box">
+				<h4>
+					Synopsis : 
+				</h4> 
+				<p>
+					{{card.Plot}} 
+				</p>
+			</div>
 
 		</div>
-
-	<div id="plot_box">
-		<li>{{card.Plot}}</li> <br />
-	</div>
-
-	<div id="actors_box">
-		<li>{{card.Actors}}</li> <br />
 	</div>
 
 {% endblock %}

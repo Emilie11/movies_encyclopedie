@@ -1,6 +1,7 @@
 from flask import Flask, render_template, session, request
 from dotenv import load_dotenv
 import os, json
+import requests
 
 load_dotenv()
 app = Flask(__name__)
@@ -22,8 +23,12 @@ def search_movie():
 	search_result = json.load(open('./examples/search.json', 'rb'))['Search']
 
 	####### PRODUCTION PURPOSE  #######
-	
-	
+	api_key = os.getenv("API_KEY")
+	# url = 'http://www.omdbapi.com/?apikey=' + api_key + '&s=' + search_term
+	# search_result = requests.get(url).json()
+	# search_result = search_result['Search']
+
+
 	return render_template('search.html', title='Home', movies_found=search_result)
 
 @app.route('/movie/<string:movie_id>')
@@ -33,7 +38,9 @@ def movie_page(movie_id):
 	card_result = json.load(open('./examples/card.json', 'rb'))
 
 	####### PRODUCTION PURPOSE  #######
-
+	# api_key = os.getenv("API_KEY")
+	# url = 'http://www.omdbapi.com/?apikey=' + api_key + '&i=' + movie_id
+	# card_result = requests.get(url).json()
 
 	return render_template('card.html', title='Home', card = card_result)
 

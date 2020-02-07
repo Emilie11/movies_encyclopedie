@@ -1,45 +1,67 @@
 body {
-	background-color: /*#C6C6C6*/ #2D313F;
+	background-color: #f8f8f8;
 }
 
 h1 {
-	background-color: darkblue;
-	color: lightblue;
+	background-color: #f8f8f8;
+	color: #9b0d00;
+	font-size: 10em;
 	text-align: center;
 }
 
 a{
-	color: yellow;
+	color: black;
 }
 
-ul{
-	color: white;
+h2{
+	color: #9b0d00;
+	font-size: 4em;
 }
 
+h3{
+	color: #9b0d00;
+	font-size: 3em;
+}
+
+h4{
+	color: #9b0d00;
+	font-size: 2.5em; 
+}
 #search_form{
 	margin:auto;
-	background-color: maroon;
-	color: white;
+	background-color: #f8f8f8;
+	font-size: 1.3em;
+	color:  #626b94;
 	text-align: center;
 }
 #content_box {  
-	background-color: #2D313F;
-	color: white;
+	background-color: #f8f8f8;
+	color: black;
 	display: block;
 }
 #picture_box{
-	background-color: pink;
+	background-color: #f8f8f8;
 	display: inline-block;
 
 }
 #description_box{
-	background-color: #2D313F;
+	background-color: #f8f8f8;
 	display: inline-block;
 }
 #plot_box{
-	background-color: #2D313F;
+	background-color: #f8f8f8;
 }
 #actors_box{
-	background-color: #2D313F;
-	color: white;
+	background-color: #f8f8f8;
+	color: black;
+}
+.bg-red{
+	background-color: red;
+}
+
+.bg-green{
+	background-color: blue;
+}
+header div{
+	display: inline-block;
 }
